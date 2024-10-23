@@ -1,3 +1,4 @@
+
 /* Copyright (c) 2020 MTHS All rights reserved
  *
  * Created by: Ella An
@@ -10,14 +11,13 @@ let numberOne: number
 let numberTwo: number
 
 //setup
-numberTwo = -1
-numberOne = -1
+numberOne = randint(0, 99)
+numberTwo = randint(0, 99)
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 //button a pressed
 input.onButtonPressed(Button.A, function () {
-    numberOne = randint(0, 99)
     basic.showString("#1:" + (numberOne).toString())
     basic.pause(1000)
     basic.showIcon(IconNames.Happy)
@@ -25,7 +25,6 @@ input.onButtonPressed(Button.A, function () {
 
 //button b pressed
 input.onButtonPressed(Button.B, function () {
-    numberTwo = randint(0, 99)
     basic.showString("#2:" + (numberTwo).toString())
     basic.pause(1000)
     basic.showIcon(IconNames.Happy)
