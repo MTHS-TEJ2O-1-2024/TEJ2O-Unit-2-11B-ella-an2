@@ -1,10 +1,47 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
-This module is a Micro:bit MicroPython program
+Created by: Ella An
+Created on: Oct 2024
+This module compares numbers
 """
 
+"""imports"""
 from microbit import *
+from random import *
+from time import sleep
+
+"""setup"""
+numberOne = -1
+numberTwo = -1
+
+display.clear
+display.show(Image.HAPPY)
+sleep(1)
 
 
-display.scroll("Hello, World!")
+while True:
+    """if button a is pressed"""
+    if button_a.is_pressed():
+        numberOne = randint(0, 99)
+        display.clear
+        display.scroll("#1:" + str(numberOne))
+        sleep(1)
+        display.show(Image.HAPPY)
+
+    """if button b is pressed"""
+    if button_b.is_pressed():
+        numberTwo = randint(0, 99)
+        display.clear
+        display.scroll("#2:" + str(numberTwo))
+        sleep(1)
+        display.show(Image.HAPPY)
+
+    """if microbit is shook"""
+    if accelerometer.was_gesture("shake"):
+        if numberOne < numberTwo:
+            display.scroll(str(numberOne) + "<" + str(numberTwo))
+            sleep(1)
+            display.show(Image.HAPPY)
+        else:
+            display.scroll(str(numberOne) + ">" + str(numberTwo))
+            sleep(1)
+            display.show(Image.HAPPY)
