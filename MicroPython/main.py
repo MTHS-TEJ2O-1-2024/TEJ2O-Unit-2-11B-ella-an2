@@ -10,8 +10,8 @@ from random import *
 from time import sleep
 
 """setup"""
-numberOne = -1
-numberTwo = -1
+numberOne = randint(0, 99)
+numberTwo = randint(0, 99)
 
 display.clear
 display.show(Image.HAPPY)
@@ -21,7 +21,6 @@ sleep(1)
 while True:
     """if button a is pressed"""
     if button_a.is_pressed():
-        numberOne = randint(0, 99)
         display.clear
         display.scroll("#1:" + str(numberOne))
         sleep(1)
@@ -29,7 +28,6 @@ while True:
 
     """if button b is pressed"""
     if button_b.is_pressed():
-        numberTwo = randint(0, 99)
         display.clear
         display.scroll("#2:" + str(numberTwo))
         sleep(1)
