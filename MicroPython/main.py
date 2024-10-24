@@ -36,10 +36,12 @@ while True:
     """if microbit is shook"""
     if accelerometer.was_gesture("shake"):
         if numberOne < numberTwo:
+            display.clear
             display.scroll(str(numberOne) + "<" + str(numberTwo))
             sleep(1)
             display.show(Image.HAPPY)
         else:
+            display.clear
             display.scroll(str(numberOne) + ">" + str(numberTwo))
             sleep(1)
             display.show(Image.HAPPY)
