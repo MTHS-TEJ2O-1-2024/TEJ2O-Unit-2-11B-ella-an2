@@ -18,6 +18,7 @@ basic.showIcon(IconNames.Happy)
 
 //button a pressed
 input.onButtonPressed(Button.A, function () {
+    basic.clearScreen()
     basic.showString("#1:" + (numberOne).toString())
     basic.pause(1000)
     basic.showIcon(IconNames.Happy)
@@ -25,6 +26,7 @@ input.onButtonPressed(Button.A, function () {
 
 //button b pressed
 input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
     basic.showString("#2:" + (numberTwo).toString())
     basic.pause(1000)
     basic.showIcon(IconNames.Happy)
@@ -33,11 +35,13 @@ input.onButtonPressed(Button.B, function () {
 //when microbit is shaken
 input.onGesture(Gesture.Shake, function () {
     if(numberOne < numberTwo) {
+        basic.clearScreen()
         basic.showString((numberOne).toString() + "<" + (numberTwo).toString())
         basic.pause(1000)
         basic.showIcon(IconNames.Happy)
     }
     else {
+        basic.clearScreen()
         basic.showString((numberOne).toString() + ">" + (numberTwo).toString())
         basic.pause(1000)
         basic.showIcon(IconNames.Happy)
