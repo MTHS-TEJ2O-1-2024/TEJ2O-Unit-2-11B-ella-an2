@@ -39,9 +39,9 @@ while True:
             display.clear
             display.scroll(str(numberOne) + "<" + str(numberTwo))
             sleep(1)
-            display.show(Image.HAPPY)
+            display.show(Image.SAD)
         else:
             display.clear
             display.scroll(str(numberOne) + ">" + str(numberTwo))
             sleep(1)
-            display.show(Image.HAPPY)
+            display.show(Image.SAD)
